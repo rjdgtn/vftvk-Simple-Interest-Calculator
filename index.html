@@ -1,16 +1,54 @@
 <html>
     <head>
+    <title>Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <center>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <div class="formdiv">
+                Amount <input type="number"  id="principal" value="">  <br/>
+                
+                Rate <input type="range"  
+                            id="rate" 
+                            min="1" 
+                            max="20" 
+                            value="10.25"
+                            onchange="updateRate()"
+                            step="0.25">
+                    <span id="rate_val">10.25%</span>  
+                    <br/>
 
-        <button onclick="compute()">Compute</button>
+                No. of Years 
+                <select id="years">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                    <option value="1">6</option>
+                    <option value="1">7</option>
+                    <option value="1">8</option>
+                    <option value="1">9</option>
+                    <option value="1">10</option>
+                </select>  <br/>
+
+                <button onclick="compute()">Compute Interest</button>
+            </div>
+            <div class="outputdiv">
+                <br/>
+                <span id="result">
+
+                </span>
+            </div>
+            <footer class="footerdiv">
+                <br/>
+                &#169; Everyone Can Get Rich
+            </footer>
+        </div>
+        </center>
     </body>
 </html>
